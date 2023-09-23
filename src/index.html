@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>ME .TEO</title>
+</head>
+<body>
+    <div class="box-container">
+        <div class="toggle">
+                <img src="../assets/Icon-soleil-blanc.svg" alt="light-theme" class="img-light">
+                <img src="../assets/icons8-moon-and-stars.gif" alt="dark-theme" class="img-dark dark">
+        </div>
+        <h1>ME .TEO</h1>
+        <div class="app-container">
+            <div class="search">
+                <input type="text" placeholder="Quelle ville ?" id="search-input" class="search-bar">
+                <button type="submit" id="button-submit">
+                    <img src="../assets/icons8-chercher-480.svg" alt="search" class="search-icons">
+                </button>
+            </div>
+            <div class="error"></div>
+            <div class="weather-box">
+                <div class="weather-top">
+                    <img src="" class="weather-icons">
+                    <label class="description"></label>
+                    <span class="temperature"></span>
+                    <p class="city-name"></p>              
+                </div>
+                <div class="weather-details">
+                    <div class="details-humidity">
+                        <img src="../assets/icons8-hygrometer-500.svg" alt="humidity">
+                        <div class="humidity-infos">
+                            <p class="humidity-percent"></p>
+                        </div>
+                    </div>
+                    <div class="details-wind">
+                        <img src="../assets/icons8-windsock-500.svg" alt="humidity">
+                        <div class="wind-infos">
+                            <p class="wind-speed"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js" type="module"></script>  
+</body>
+</html>

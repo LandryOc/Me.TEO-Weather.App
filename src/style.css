@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+/*====================================*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #e3e4e6;
+    transition: 200ms;
+}
+/*====================================*/
+.box-container {
+    display: flex;  
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 100px;
+    color:#333333;
+}
+
+.box-container.dark {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 100px;
+    animation: open 1.5s ease;
+    color: white;
+}
+
+
+/*====================================*/
+.toggle {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background-color: rgb(252, 251, 251);
+    border-radius: 20px;
+    padding: 2px 5px;
+    border: 1px solid rgba(132, 130, 130, 0.5);
+}
+
+.img-light {
+    background: #00C7AB;
+    border-radius: 50%;
+    padding: 5px;
+    transition: 300ms;
+}
+
+.img-light.dark {
+    background: none;
+    border-radius: 0;
+    padding: 5px;
+    width: 35px;
+    transition: 300ms;
+}
+
+.img-dark.dark {
+    background: none;
+    border-radius: 0;
+    padding: 5px;
+    transition: 300ms;
+    width: 35px;
+}
+
+.img-dark {
+    background: #496287;
+    border-radius: 50%;
+    padding: 5px;
+    transition: 300ms;
+}
+/*====================================*/
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 450px;
+    width: 60%;
+    background: white;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0px 19px 19px -20px rgba(133, 135, 150, 1);
+    padding: 20px;
+    animation: open 1.5s ease;
+}
+
+.app-container.dark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 450px;
+    width: 80%;
+    background: #496287;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 25px;
+    color: white;
+    box-shadow: none;
+    animation: open 1.5s ease;
+}
+/*====================================*/
+.search {
+    display: flex;
+    height: 100%;
+    margin-bottom: 5px;
+}
+
+.search input {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.5rem;
+    width: 200px;
+}
+
+.search-bar.dark {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.5rem;
+    background: #496287;
+    width: 200px;
+    color: white;   
+}
+.search-bar.dark::placeholder {
+    color: white;
+}
+
+.search button {
+    display: flex;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.search button:hover {
+    background-color: #00C7AB;
+}
+
+.search img {
+    padding: 10px;
+}
+
+.error-text{
+    color: #e7486b;
+    animation: open 300ms ease;
+    font-size: 1rem;
+}
+/*====================================*/
+.weather-box.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    transition: 0.3s;
+}
+
+.weather-box {
+    display: none;
+    transition: 0.3s;
+}
+
+.weather-top {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgb(129, 125, 125);
+    padding: 20px;
+    width: 250px;
+}
+
+.weather-top label {
+    font-size: 0.8rem;
+    font-style: italic;
+    padding: 5px 0;
+}
+
+.weather-icons {
+    width: 150px;
+    margin-bottom: 5px;
+}
+
+.weather-box span {
+    font-size: 2rem;
+}
+
+.weather-box p {
+    font-size: 1.2rem;
+}
+
+.weather-details {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-top: 15px;
+}
+
+.details-humidity,
+.details-wind { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.humidity-percent,
+.wind-speed {
+    font-size: 1.5rem;
+}
+/*====================================*/
+@media screen and (max-width: 750px) {
+    .box-container,
+    .box-container.dark {
+        flex-direction: column;
+        gap: 20px;
+        font-size: 1.2rem;
+    } 
+    .app-container,
+    .app-container.dark {
+        max-width: 350px;
+        width: 70%;
+        padding: 15px;
+    }
+    .search {
+        gap: 40px;
+    }
+    .search input,
+    .search-bar.dark {
+        font-size: 1rem;
+        width: 100px;
+    }
+    .search img {
+        width: 50px;
+    }
+    .weather-box span {
+        font-size: 1.2rem;
+    }
+    .weather-icons {
+        width: 100px;
+    }
+    .weather-details {
+        gap: 40px;
+    }
+    .details-humidity img,
+    .details-wind img { 
+        width: 40px;
+    }
+    .humidity-percent,
+    .wind-speed {
+        font-size: 1.2rem;
+    }
+}
+/*====================================*/
+@media screen and (max-width: 400px) {
+    .box-container,
+    .box-container.dark {
+        gap: 20px;
+        font-size: 0.8rem;
+    } 
+    .app-container, 
+    .app-container.dark {
+        padding: 10px;
+        width: 100%;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+    .search {
+        gap: 20px;
+    }
+    .search input,
+    .search-bar.dark {
+        font-size: 1rem;
+        width: 100px;
+    }
+    .search img {
+        width: 40px;
+    }
+    .weather-box span {
+        font-size: 1rem;
+    }
+    .weather-icons {
+        width: 70px;
+    }
+    .weather-details {
+        gap: 40px;
+    }
+    .details-humidity img,
+    .details-wind img { 
+        width: 30px;
+    }
+    .humidity-percent,
+    .wind-speed {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    .weather-top {
+        border-bottom: 0;
+    }
+}
+/*====================================*/
+@media screen and (max-height: 600px) {
+    body {
+        overflow: hidden;
+    }
+    .app-container,
+    .app-container.dark {
+        border-radius: 0px;
+        padding: 20px;
+    }
+}
